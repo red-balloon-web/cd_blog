@@ -1,0 +1,175 @@
+body {
+    font-family: 'Source Serif Pro';
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin: 3rem 0 4rem 0;
+    font-weight: 500;
+    color: #333;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 0 2rem 0;
+    color: #444;
+}
+
+h3 {
+    color: #555;
+    font-weight: 500;
+    margin: 0 0 1rem 0;
+}
+
+p {
+    line-height: 250%;
+    color: #666;
+    margin: 0 0 2rem 0;
+}
+
+span.dropcap {
+    font-size: 5rem;
+    float: left;
+    margin-bottom: 0;
+    line-height: 1;
+    margin-right: 10px;
+}
+
+p.quote {
+    font-style: italic;
+    font-size: 1.1rem;
+    color:#777;
+    position: relative;
+    margin-top: 60px;
+
+    &:before {
+        content: '\201c';
+        font-size: 80px;
+        position: absolute;
+        left: 0;
+        top: -20px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    &:after {
+        content: '\201d';
+        font-size: 80px;
+        position: absolute;
+        right: 0;
+        bottom: -50px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+}
+
+ul {
+    line-height: 220%;
+    color: #666;
+}
+
+ul.graphic {
+    padding-left: 0;
+
+    li {
+        margin: 0;
+        padding: 15px 0 15px 55px;
+        list-style: none;
+        background-image: url("images/test-card.jpg");
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: 30px;
+    }
+}
+
+p.button-wrap {
+    margin: 0;
+    line-height: 100%;
+}
+
+a {
+    color: var(--action-color-1);
+    text-decoration: none;
+
+    &:hover {
+        color: var(--action-color-2);
+    }
+}
+
+@define-mixin button {
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 40px;
+    background-color: var(--action-color-1);
+    color: var(--action-color-1--text);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: .8rem;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Open Sans';
+    transition: color 0.3s, background-color 0.3s, border 0.3s;
+
+    &:hover {
+        background-color: var(--action-color-2);
+        color: var(--action-color-2--text);
+        border: 1px solid black;
+        transition: color 0.3s, background-color 0.3s, border 0.3s;
+    }
+}
+
+@define-mixin button-ghost {
+    background: unset;
+    font-weight: 400;
+    color: #ccc;
+    border: 1px solid #aaa;
+    
+    &:hover {
+        color: #333;
+        border: 1px solid #ccc;
+        background-color: #ccc;
+    }
+}
+
+a.button {
+    @mixin button;
+
+    &.ghost {
+        @mixin button-ghost;
+    }
+}
+
+@define-mixin text-link {
+    font-weight: 700;
+    font-size: 1rem;
+    position: relative;
+
+    &:after {
+        position: absolute;
+        content: "\f105";
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        font-size: 14px;
+        top: 2px;
+        right: -14px;
+        transition: all 100ms ease-out;
+    }
+
+    &:hover:after {
+        right: -17px;
+    }
+}
+
+a.text-link {
+    @mixin text-link;
+}
+
+hr {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 80%;
+    border-top: 1px solid #999;
+    border-bottom: 0;
+}

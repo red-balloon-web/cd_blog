@@ -1,0 +1,54 @@
+h2.statue-subheading {
+    font-size: 1.2rem;
+    line-height: 1;
+    margin-bottom: 50px;
+}
+
+.map_and_thumbnail {
+    display: flex;
+    margin-bottom: 50px;
+
+    .thumbnail {
+        width: 55%;
+        flex-grow: 0;
+        flex-shrink: 0;
+
+        img {
+            width: 100%;
+            height: auto;
+            padding-right: 30px;
+        }
+    }
+
+    .map_details {
+        width: 45%;
+        flex-grow: 0;
+        flex-shrink: 0;
+
+        .acf-map {
+            width: 100%;
+            height: 300px;
+            border: #ccc solid 1px;
+            margin: 0;
+        }
+        
+        .acf-map img {
+           max-width: inherit !important;
+        }
+
+        .details {
+            margin-top: 30px;
+
+            p {
+                margin: 0;
+                margin-bottom: 10px;
+
+                &.posted {
+                    text-align: left;
+                    color: #999;
+                    margin-top: 24px;
+                }
+            }
+        }
+    }
+}

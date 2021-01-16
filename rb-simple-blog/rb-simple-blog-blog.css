@@ -1,0 +1,269 @@
+/* STRUCTURE */
+
+.rb-simple-blog,
+.rb-timeline-blog {
+    display: flex;
+    flex-direction: row;
+}
+
+.rb-simple-blog__main,
+.rb-timeline-blog__main {
+    width: 75%;
+    flex: none;
+}
+
+.rb-simple-blog__sidebar,
+.rb-timeline-blog__sidebar {
+    width: 25%;
+    flex: none;
+    padding-left: 50px;
+}
+
+.rb-simple-blog__sidebar li {
+    list-style-type: none;
+}
+
+@media only screen and (max-width: 992px) {
+    .rb-simple-blog {
+        flex-direction: column;
+    }
+
+    .rb-simple-blog__main,
+    .rb-simple-blog__sidebar {
+        width: 100%;
+        padding-left: 0;
+    }
+}
+
+/* ARCHIVES */
+
+.rb-simple-blog__archive-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 0 0 100px 0;
+}
+
+.rb-simple-blog__archive-item-image {
+    margin-right: 50px;
+}
+
+.rb-simple-blog__archive-item-image img {
+    border-radius: 1000px;
+    width: 200px;
+    height: 200px;
+}
+
+.rb-simple-blog__archive-item-description-header-text {
+    margin-bottom: 2rem;
+}
+
+.rb-simple-blog__archive-item-description {
+    display: flex;
+    flex-direction: column;
+}
+
+.rb-simple-blog__archive-item-description-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.rb-simple-blog__archive-item-post-title {
+    font-size: 2.3rem;
+}
+
+.rb-simple-blog__archive-item-post-author {
+    margin: 0;
+    font-style: italic;
+    line-height: 150%;
+    margin-top: 4px;
+}
+
+.rb-simple-blog__archive-item-post-excerpt {
+    line-height: 200%;
+}
+
+.rb-simple-blog__archive-item-comment-count {
+    margin: 0;
+    line-height: 150%;
+    margin-top: 4px;
+}
+
+.rb-simple-blog__archive-item-date-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.rb-simple-blog__archive-item-date-box--date {
+    color: #999;
+    font-size: 2.5rem;
+}
+
+.rb-simple-blog__archive-item-date-box--month {
+    text-transform: uppercase;
+    color: #666;
+    font-size: 1.3rem;
+}
+
+@media only screen and (max-width: 991px) {
+    .rb-simple-blog__archive-item {
+        flex-direction: column;
+    }
+
+    .rb-simple-blog__archive-item-image {
+        margin: 0px auto 30px auto;
+    }
+}
+
+/* WIDGETS */
+
+.widget {
+    margin-bottom: 4rem;
+}
+
+.widget ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.widget ul li {
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.widget ul li:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+.widgettitle {
+    margin-top: 0;
+    margin-bottom: 2.4rem;
+    color: #999;
+    font-size: 1.8rem;
+}
+
+/* SINGLE PAGE */
+
+.rb-simple-blog__single-post-title {
+    margin-bottom: 0;
+}
+
+.rb-simple-blog__single-post-meta {
+    line-height: 100%;
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.rb-simple-blog__single-post-categories {
+    text-align: center;
+}
+
+.rb-simple-blog__single-post-thumbnail {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+
+.rb-simple-blog__single-post-thumbnail img {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+    width: auto;
+}
+
+/* COMMENTS TEMPLATE */ 
+
+.rb-simple-blog__comments-template ol,
+.rb-simple-blog__comments-template ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.rb-simple-blog__comments-template ul.children {
+    padding-left: 100px;
+}
+
+.rb-simple-blog__comments-template .comment-body {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.rb-simple-blog__comments-template cite.fn {
+    margin-left: 10px;
+    font-size: 1.4rem;
+    font-style: normal;
+    color: #666;
+}
+
+.rb-simple-blog__comments-template .says {
+    display: none;
+}
+
+.rb-simple-blog__comments-template .comment-meta {
+    margin-top: 1rem;
+    font-size: .9rem;
+}
+
+.rb-simple-blog__comments-template #respond {
+    margin-bottom: 3rem;
+}
+
+.rb-simple-blog__comments-template .comment-form-comment {
+    margin-top: 0;
+}
+
+.rb-simple-blog__comments-template .comment-form-comment label {
+    display: none;
+}
+
+.rb-simple-blog__comments-template .comment-form-comment textarea {
+    width: 100%;
+    padding: 10px;
+    color: #555;
+    height: 250px;
+    border: 1px solid #ccc;
+}
+
+.rb-simple-blog__comments-template .logged-in-as {
+    margin-bottom: 0;
+    font-size: .9rem;
+    font-style: italic;
+}
+
+/* EDIT COMMENTS TEMPLATE TO MAKE REPLY BUTTONS BUTTONS */
+.rb-simple-blog__comments-template .reply a,
+.rb-simple-blog__comments-template input[type=submit] {
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 40px;
+    background-color: #d14f41;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: .8rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s, background-color 0.3s, border 0.3s;
+    line-height: 100%;
+}
+
+.rb-simple-blog__comments-template .reply a:hover,
+.rb-simple-blog__comments-template input[type=submit]:hover {
+    background-color: black;
+    color: #eee;
+    border: 1px solid black;
+    transition: color 0.3s, background-color 0.3s, border 0.3s;
+    cursor: pointer;
+}

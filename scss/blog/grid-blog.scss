@@ -1,0 +1,120 @@
+.blog-books {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+
+    .archive-item {
+
+        
+        width: 31%;
+        /*border: 1px solid #eee;*/
+        margin-bottom: 50px;
+        
+        @mixin belowLg {
+            width: 49%;
+        }
+
+        @mixin belowMd {
+            width: 90%;
+        }
+
+        @mixin belowSm {
+            width: 100%;
+        }
+        .post-image {
+            width: 100%;
+            text-align: center;
+            overflow-y: hidden;
+            position: relative;
+
+            .datebox {
+                position: absolute;
+                background-color: var(--highlight-color-1);
+                color: white;
+                bottom: 20px;
+                left: 20px;
+                padding: 6px 10px;
+            }
+        }
+
+        p.title {
+            font-size: 1.6rem;
+            text-align: center;
+            margin-bottom: 0;
+            color: #333;
+            line-height: 1.5;
+            margin-top: 10px;
+        }
+
+        p.author {
+            font-size: 1rem;
+            text-align: center;
+            margin-top: 0;
+            line-height: 1.5;
+        }
+
+        p.excerpt {
+            font-size: .9rem;
+            line-height: 2;
+            text-align: center;
+        }
+
+        .metabox {
+            padding: 10px;
+
+            p.meta {
+                margin: 0;
+                line-height: 150%;
+            }
+        }
+
+        hr {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .contentbox {
+            padding: 10px;
+
+            h2 {
+                text-align: left;
+            }
+        }
+    }
+}
+
+.single-blog {
+    h1.title {
+        margin-bottom: 20px;
+
+        @mixin belowMd {
+            margin-top: 0;
+            font-size: 2.4rem;
+            margin-bottom: 5px;
+        }
+    }
+    h2.author {
+        @mixin belowMd {
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+        }
+    }
+    .thumbnail {
+        text-align: center;
+    }
+    .posted-on {
+        text-align: center;
+    }
+    .content {
+        max-width: 900px;
+        margin: 0px auto;
+
+        @mixin belowMd {
+            p {
+                font-size: 1rem;
+                line-height: 2;
+            }
+        }
+    }
+}
